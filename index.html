@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<button id="modo-oscuro-btn">Modo Oscuro</button>
+
   <header>
     <h1>Aldana Persia</h1>
     <p>Diseñadora de indumentaria y docente</p>
@@ -98,12 +100,41 @@
     <p><a href="images/cv.pdf" target="_blank" class="cv-button">Descargar Curriculum Vitae</a></p>
   </section>
 
-  <!-- Contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: persiaaldana@gmail.com</p>
-    <p>Instagram: @aldana.persia</p>
-    <p>LinkedIn: Aldana Persia</p>
-  </section>
+<!-- Contacto -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="contacto-container">
+    <a href="mailto:persiaaldana@gmail.com" target="_blank">
+      <img src="images/email-icon.png" alt="Email" class="icono-contacto">
+      persiaaldana@gmail.com
+    </a>
+    <a href="https://www.instagram.com/aldana.persia/" target="_blank">
+      <img src="images/instagram-icon.png" alt="Instagram" class="icono-contacto">
+      @aldana.persia
+    </a>
+    <a href="https://www.linkedin.com/in/aldana-persia/" target="_blank">
+      <img src="images/linkedin-icon.png" alt="LinkedIn" class="icono-contacto">
+      Aldana Persia
+    </a>
+  </div>
+</section>
+
+<script>
+  const btn = document.getElementById('modo-oscuro-btn');
+  const body = document.body;
+
+  if(localStorage.getItem('tema') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  btn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if(body.classList.contains('dark-mode')) {
+      localStorage.setItem('tema', 'dark');
+    } else {
+      localStorage.setItem('tema', 'light');
+    }
+  });
+</script>
 </body>
 </html>
