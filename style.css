@@ -1,0 +1,153 @@
+/* -------------------------------
+   ESTILOS GENERALES
+---------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* -------------------------------
+   ENCABEZADO
+---------------------------------*/
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #eaeaea;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* -------------------------------
+   SECCIONES
+---------------------------------*/
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* -------------------------------
+   FOTO DE PERFIL
+---------------------------------*/
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* -------------------------------
+   IMÁGENES DE DOCENCIA Y PROYECTOS
+---------------------------------*/
+.docencia-images img,
+.proyecto-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* -------------------------------
+   VIDEO
+---------------------------------*/
+video {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* -------------------------------
+   CURRICULUM VITAE
+---------------------------------*/
+.cv-container {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #555;
+}
+
+/* -------------------------------
+   CONTACTO
+---------------------------------*/
+#contacto p {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+/* -------------------------------
+   RESPONSIVE
+---------------------------------*/
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
