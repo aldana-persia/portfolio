@@ -1,114 +1,110 @@
-﻿/* ===== Estilos generales ===== */
+﻿/* --- Estilos generales --- */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  line-height: 1.5; /* Interlineado general */
+  background-color: #fff8f0; /* Fondo general clarito */
   color: #333;
 }
 
-/* ===== Header ===== */
-header {
-  background-color: #f7e7d7; /* fondo crema */
-  color: #333;               /* texto oscuro */
-  padding: 30px 20px;
-  text-align: center;
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
 }
 
-header h1 {
-  margin: 0;
+h1 {
   font-size: 2.5em;
+  line-height: 1.2; /* Menor interlineado del header */
+}
+
+header {
+  background-color: #f3e0c1; /* Color de fondo cremosito */
+  text-align: center;
+  padding: 30px 10px;
 }
 
 header p {
-  margin-top: 10px;
   font-size: 1.2em;
+  margin-top: 5px; /* Menor espacio entre nombre y subtítulo */
 }
 
-/* ===== Sección Sobre mí ===== */
-#sobre-mi {
+/* --- Secciones --- */
+section {
   padding: 40px 20px;
-  text-align: center;
-  border-top: 2px solid #ccc; /* separador */
+  border-bottom: 1px solid #ccc; /* Línea de separación */
 }
 
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+section h3 {
+  margin-top: 20px;
+  margin-bottom: 5px; /* Menor espacio entre nombre y descripción */
+  font-size: 1.4em;
+}
+
+section p {
+  margin-top: 0;
+  margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+/* --- Foto de perfil --- */
 .foto-perfil {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 20px;
+  display: block;
+  margin: 20px auto;
 }
 
-/* ===== Secciones Docencia, Proyectos, CV, Contacto ===== */
-section {
-  padding: 40px 20px;
-  border-top: 2px solid #ccc; /* separador entre secciones */
-}
-
-h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.5em;
-  margin-top: 15px; /* espacio reducido sobre descripción */
-  margin-bottom: 5px;
-}
-
-/* ===== Galerías de imágenes ===== */
+/* --- Galerías de imágenes --- */
 .galeria {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   margin-bottom: 20px;
 }
 
 .galeria img {
-  height: 200px;           /* altura uniforme */
-  width: auto;             /* ajusta el ancho proporcional */
-  border-radius: 8px;
-  object-fit: cover;       /* recorta si es necesario sin deformar */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease; /* transición suave para hover */
+  width: auto;
+  height: 200px; /* Altura uniforme */
+  object-fit: cover;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-/* Efecto hover: se agranda al pasar el mouse */
 .galeria img:hover {
-  transform: scale(1.1); /* aumenta 10% */
+  transform: scale(1.05); /* Efecto hover */
 }
 
-/* ===== CV ===== */
+/* --- Curriculum Vitae --- */
 .cv-container {
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 15px;
 }
 
 .cv-button {
   display: inline-block;
-  background-color: #222;
-  color: #fff;
   padding: 10px 20px;
+  background-color: #f3e0c1;
+  color: #333;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
-/* ===== Contacto ===== */
+.cv-button:hover {
+  background-color: #e5cfa1;
+}
+
+/* --- Contacto --- */
 #contacto p {
-  font-size: 1.1em;
-  margin: 5px 0;
-}
-
-/* ===== Videos ===== */
-video {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0; /* Evita espacio vertical */
 }
