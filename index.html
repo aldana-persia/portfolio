@@ -103,38 +103,45 @@
 <!-- Contacto -->
 <section id="contacto">
   <h2>Contacto</h2>
-  <div class="contacto-container">
-    <a href="mailto:persiaaldana@gmail.com" target="_blank">
-      <img src="images/email-icon.png" alt="Email" class="icono-contacto">
-      persiaaldana@gmail.com
+  <p>
+    <a href="mailto:persiaaldana@gmail.com">
+      <img src="images/email-icon.png" alt="Email" class="contact-icon"> persiaaldana@gmail.com
     </a>
+  </p>
+  <p>
     <a href="https://www.instagram.com/aldana.persia/" target="_blank">
-      <img src="images/instagram-icon.png" alt="Instagram" class="icono-contacto">
-      @aldana.persia
+      <img src="images/instagram-icon.png" alt="Instagram" class="contact-icon"> @aldana.persia
     </a>
+  </p>
+  <p>
     <a href="https://www.linkedin.com/in/aldana-persia/" target="_blank">
-      <img src="images/linkedin-icon.png" alt="LinkedIn" class="icono-contacto">
-      Aldana Persia
+      <img src="images/linkedin-icon.png" alt="LinkedIn" class="contact-icon"> Aldana Persia
     </a>
-  </div>
+  </p>
 </section>
 
 <script>
   const btn = document.getElementById('modo-oscuro-btn');
   const body = document.body;
 
+  // Ver si el usuario ya tenía preferencia
   if(localStorage.getItem('tema') === 'dark') {
     body.classList.add('dark-mode');
+    btn.textContent = 'Modo Claro';
   }
 
   btn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
+
     if(body.classList.contains('dark-mode')) {
       localStorage.setItem('tema', 'dark');
+      btn.textContent = 'Modo Claro';
     } else {
       localStorage.setItem('tema', 'light');
+      btn.textContent = 'Modo Oscuro';
     }
   });
 </script>
+
 </body>
 </html>

@@ -174,3 +174,33 @@ body.dark-mode .contacto-container a:hover {
 #modo-oscuro-btn:hover {
   background-color: #8c6239;
 }
+
+/* Botón de CV en modo oscuro */
+body.dark-mode .cv-button {
+  background-color: #f0d9b5; /* un color claro que contraste con fondo oscuro */
+  color: #333333; /* texto oscuro para contraste */
+  border: none;
+}
+
+body.dark-mode .cv-button:hover {
+  background-color: #ffd699;
+  color: #222222;
+}
+
+/* Botón de modo oscuro fijo */
+#modo-oscuro-btn {
+  position: fixed;       /* fijo en la pantalla */
+  top: 20px;             /* distancia desde arriba */
+  right: 20px;           /* distancia desde la derecha */
+  z-index: 1000;         /* siempre por encima del contenido */
+  padding: 8px 12px;
+  background-color: #f0d9b5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#modo-oscuro-btn:hover {
+  background-color: #ffd699;
+}
