@@ -28,7 +28,7 @@
   <section id="docencia">
     <h2>Docencia y Talleres</h2>
 
-    <div class="docencia-item">
+    <div class="item-docencia">
       <h3>Universidad Nacional de San Luis (Argentina)</h3>
       <p>Coordino la Diplomatura de extensión en Diseño de Indumentaria, participando en el diseño del programa, planificación de contenidos y dictado de clases.</p>
       <div class="docencia-images">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="docencia-item">
+    <div class="item-docencia">
       <h3>Talleres de Patronaje</h3>
       <p>Desarrollo talleres teórico-prácticos orientadas a comprender el proceso completo de diseño y construcción de prendas.</p>
       <div class="docencia-images">
@@ -49,15 +49,15 @@
       </div>
     </div>
 
-    <div class="docencia-item">
+    <div class="item-docencia">
       <h3>Escuela Argentina de Moda (EAModa)</h3>
-      <p>Docente de la Materia Práctica proyectual en 1er año de la Tecnicatura en Diseño de Moda e Indumentaria. Trabajo contenidos vinculados a la representación digital de indumentaria, articulando herramientas técnicas y desarrollo creativo.</p>
+      <p>Docente de la Materia Práctica proyectual en 1er año de la Tecnicatura en Diseño de Moda e indumentaria. Trabajo contenidos vinculados a la representación digital de indumentaria, articulando herramientas técnicas y desarrollo creativo.</p>
       <div class="docencia-images">
         <img src="images/eamoda1.jpg" alt="EAModa 1">
       </div>
     </div>
 
-    <div class="docencia-item">
+    <div class="item-docencia">
       <h3>Talleres de Serigrafía Textil</h3>
       <p>He desarrollado seminarios teórico-prácticos de serigrafía textil orientados a la experimentación, el aprendizaje técnico y la producción colectiva.</p>
       <div class="docencia-images">
@@ -67,15 +67,13 @@
         <img src="images/serigrafia4.jpg" alt="Taller de serigrafía 4">
       </div>
     </div>
-
-    <p>Todos los trabajos mostrados en esta sección fueron realizados por los alumnos durante los talleres y diplomaturas.</p>
   </section>
 
   <!-- Proyectos -->
   <section id="proyectos">
     <h2>Proyectos</h2>
 
-    <div class="proyecto-item">
+    <div class="item-proyecto">
       <h3>Hilanda - Diseño Sustentable</h3>
       <p>Proyecto de investigación y diseño centrado en la reutilización de caucho reciclado y la exploración de procesos textiles artesanales. Marca certificada por el Ministerio de Medio Ambiente de San Luis, Argentina. Resolución n° 61- PGA-2012.</p>
       <div class="proyecto-images">
@@ -86,7 +84,7 @@
       </div>
     </div>
 
-    <div class="proyecto-item">
+    <div class="item-proyecto">
       <h3>Fab Textiles - Fab Lab Barcelona</h3>
       <p>Proyecto de investigación enfocado en la exploración de nuevas materialidades y tecnologías aplicadas al diseño de indumentaria y textil. El trabajo integra experimentación, prototipado y desarrollo de superficies innovadoras.</p>
       <div class="proyecto-images">
@@ -97,7 +95,7 @@
       </div>
     </div>
 
-    <div class="proyecto-item">
+    <div class="item-proyecto">
       <h3>Barcelona Design Week 12° Edición</h3>
       <p>Colaboración en el proyecto expositivo Refraccions de la diseñadora Cristina Noguer, presentado en el marco de la Barcelona Design Week, Design Unique Piece.</p>
       <div class="proyecto-images">
@@ -119,14 +117,13 @@
   <!-- Contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
-    <div class="contacto-container">
-      <p><img src="images/mail-icon.png" class="icon"> <a href="mailto:persiaaldana@gmail.com">Email: persiaaldana@gmail.com</a></p>
-      <p><img src="images/instagram-icon.png" class="icon"> <a href="https://www.instagram.com/aldana.persia" target="_blank">Instagram: @aldana.persia</a></p>
-      <p><img src="images/linkedin-icon.png" class="icon"> <a href="https://www.linkedin.com/in/aldana-persia" target="_blank">LinkedIn: Aldana Persia</a></p>
+    <div class="contact-icons">
+      <p><img src="images/mail-icon.png" alt="Email Icon"> <a href="mailto:persiaaldana@gmail.com">persiaaldana@gmail.com</a></p>
+      <p><img src="images/instagram-icon.png" alt="Instagram Icon"> <a href="https://www.instagram.com/aldana.persia" target="_blank">@aldana.persia</a></p>
+      <p><img src="images/linkedin-icon.png" alt="LinkedIn Icon"> <a href="https://www.linkedin.com/in/aldana-persia/" target="_blank">Aldana Persia</a></p>
     </div>
   </section>
 
-  <!-- Script Modo Oscuro -->
   <script>
     const btn = document.getElementById('modo-oscuro-btn');
     const body = document.body;
@@ -134,15 +131,17 @@
     // Ver si el usuario ya tenía preferencia
     if(localStorage.getItem('tema') === 'dark') {
       body.classList.add('dark-mode');
+      btn.textContent = "Modo Claro";
     }
 
     btn.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
-      // Guardar la preferencia
       if(body.classList.contains('dark-mode')) {
         localStorage.setItem('tema', 'dark');
+        btn.textContent = "Modo Claro";
       } else {
         localStorage.setItem('tema', 'light');
+        btn.textContent = "Modo Oscuro";
       }
     });
   </script>
