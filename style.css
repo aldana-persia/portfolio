@@ -1,152 +1,104 @@
-﻿/* ====================== RESET BÁSICO ====================== */
-* {
+﻿/* ===== Estilos generales ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* ====================== BODY ====================== */
-body {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px 0;
-}
-
-/* ====================== HEADER ====================== */
 header {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
   text-align: center;
-  padding: 40px 20px 20px 20px;
-  background-color: #f8f8f8;
 }
 
 header h1 {
+  margin: 0;
   font-size: 2.5em;
-  margin: 10px 0;
 }
 
 header p {
+  margin-top: 10px;
   font-size: 1.2em;
-  color: #666;
+}
+
+/* ===== Sección Sobre mí ===== */
+#sobre-mi {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .foto-perfil {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #ccc;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
-/* ====================== SECCIONES ====================== */
+/* ===== Sección Docencia y Proyectos ===== */
 section {
-  margin: 40px 0;
+  padding: 40px 20px;
 }
 
-section h2 {
+h2 {
   font-size: 2em;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
-/* ====================== GALERÍAS ====================== */
+h3 {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+
+/* ===== Galerías de imágenes ===== */
 .galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
+  display: flex;           /* Mostrar imágenes en fila */
+  flex-wrap: wrap;         /* Saltar a otra fila si no caben */
+  gap: 10px;               /* Espacio entre imágenes */
+  justify-content: center; /* Centrar las imágenes */
+  margin-bottom: 20px;     /* Separación inferior */
 }
 
 .galeria img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  max-width: 250px;        /* Ancho máximo de cada imagen */
+  height: auto;            /* Mantener proporción */
+  border-radius: 8px;      /* Bordes redondeados */
+  object-fit: cover;       /* Ajusta la imagen sin deformar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra opcional */
 }
 
-/* ====================== DOCENCIA Y PROYECTOS ====================== */
-.item {
-  margin-bottom: 40px;
-}
-
-.item h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #444;
-}
-
-.item p {
-  margin-bottom: 10px;
-  font-size: 1em;
-  color: #555;
-}
-
-/* ====================== VIDEO ====================== */
-video {
-  width: 100%;
-  max-height: 400px;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-/* ====================== CURRICULUM ====================== */
+/* ===== CV ===== */
 .cv-container {
+  text-align: center;
   margin: 20px 0;
 }
 
 .cv-button {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
+  background-color: #222;
   color: #fff;
+  padding: 10px 20px;
   text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
-.cv-button:hover {
-  background-color: #555;
-}
-
-/* ====================== CONTACTO ====================== */
+/* ===== Contacto ===== */
 #contacto p {
-  margin-bottom: 8px;
+  font-size: 1.1em;
+  margin: 5px 0;
 }
 
-#contacto a {
-  color: #333;
-  text-decoration: none;
-}
-
-#contacto a:hover {
-  text-decoration: underline;
-}
-
-/* ====================== RESPONSIVE ====================== */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2em;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-
-  section h2 {
-    font-size: 1.5em;
-  }
-
-  .item h3 {
-    font-size: 1.2em;
-  }
+/* ===== Videos ===== */
+video {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
