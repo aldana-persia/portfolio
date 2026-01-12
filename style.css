@@ -1,206 +1,177 @@
-﻿/* --- Estilos generales --- */
+﻿/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5; /* Interlineado general */
-  background-color: #fff8f0; /* Fondo general clarito */
+  line-height: 1.5;
+  background-color: #fff;
   color: #333;
+  padding: 20px;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 2.5em;
-  line-height: 1.2; /* Menor interlineado del header */
-}
-
+/* Encabezado */
 header {
-  background-color: #f3e0c1; /* Color de fondo cremosito */
   text-align: center;
-  padding: 30px 10px;
+  background-color: #f5e6d3; /* Cremita */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
 }
 
 header p {
   font-size: 1.2em;
-  margin-top: 5px; /* Menor espacio entre nombre y subtítulo */
+  margin-top: 0;
 }
 
-/* --- Secciones --- */
+/* Foto de perfil */
+.foto-perfil {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Secciones */
 section {
-  padding: 40px 20px;
-  border-bottom: 1px solid #ccc; /* Línea de separación */
+  margin-bottom: 40px;
 }
 
 section h2 {
-  margin-bottom: 20px;
   font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
 }
 
 section h3 {
-  margin-top: 20px;
-  margin-bottom: 5px; /* Menor espacio entre nombre y descripción */
-  font-size: 1.4em;
+  font-size: 1.3em;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 section p {
-  margin-top: 0;
-  margin-bottom: 15px; /* Espacio entre párrafos */
+  margin-bottom: 10px;
 }
 
-/* --- Foto de perfil --- */
-.foto-perfil {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 20px auto;
-}
-
-/* --- Galerías de imágenes --- */
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.galeria img {
+/* Imágenes docencia y proyectos */
+.docencia-images img,
+.proyecto-images img {
+  height: 250px;
   width: auto;
-  height: 200px; /* Altura uniforme */
-  object-fit: cover;
+  margin: 5px;
+  border-radius: 5px;
   transition: transform 0.3s;
-  cursor: pointer;
 }
 
-.galeria img:hover {
-  transform: scale(1.05); /* Efecto hover */
+.docencia-images img:hover,
+.proyecto-images img:hover {
+  transform: scale(1.05);
 }
 
-/* --- Curriculum Vitae --- */
-.cv-container {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
+/* Botón CV */
 .cv-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #f3e0c1;
-  color: #333;
+  background-color: #a67c52;
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 10px;
   transition: background-color 0.3s;
 }
 
 .cv-button:hover {
-  background-color: #e5cfa1;
+  background-color: #8c6243;
 }
 
-/* --- Contacto --- */
-#contacto p {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 0; /* Evita espacio vertical */
-}
-
-.contacto-container {
+/* Contacto */
+#contacto {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
+  gap: 20px;
 }
 
-.contacto-container a {
+#contacto p {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
+  gap: 5px;
 }
 
-.contacto-container a:hover {
-  color: #a67c52; /* o cualquier color que combine con tu web */
+.contact-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.icono-contacto {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-}
-
-body.dark-mode header {
-  background-color: #333333;
-  color: #f0f0f0;
-}
-
-body.dark-mode a {
-  color: #f0d9b5;
-}
-
-body.dark-mode .contacto-container a:hover {
-  color: #ffcc80;
-}
-
-/* Botón de cambio de tema */
+/* Botón modo oscuro fijo */
 #modo-oscuro-btn {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #a67c52; /* color de tu web */
-  color: white;
-  border: none;
   padding: 8px 12px;
+  background-color: #a67c52;
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   z-index: 1000;
-  font-weight: 500;
   transition: background-color 0.3s;
 }
 
 #modo-oscuro-btn:hover {
-  background-color: #8c6239;
+  background-color: #8c6243;
 }
 
-/* Botón de CV en modo oscuro */
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background-color: #444;
+}
+
 body.dark-mode .cv-button {
-  background-color: #f0d9b5; /* un color claro que contraste con fondo oscuro */
-  color: #333333; /* texto oscuro para contraste */
-  border: none;
+  background-color: #666;
 }
 
 body.dark-mode .cv-button:hover {
-  background-color: #ffd699;
-  color: #222222;
+  background-color: #888;
 }
 
-/* Botón de modo oscuro fijo */
-#modo-oscuro-btn {
-  position: fixed;       /* fijo en la pantalla */
-  top: 20px;             /* distancia desde arriba */
-  right: 20px;           /* distancia desde la derecha */
-  z-index: 1000;         /* siempre por encima del contenido */
-  padding: 8px 12px;
-  background-color: #f0d9b5;
+/* Separadores */
+hr {
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px 0;
 }
 
-#modo-oscuro-btn:hover {
-  background-color: #ffd699;
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .docencia-images img,
+  .proyecto-images img {
+    height: 180px;
+  }
+
+  #contacto {
+    flex-direction: column;
+  }
+
+  #modo-oscuro-btn {
+    top: 10px;
+    right: 10px;
+  }
 }
