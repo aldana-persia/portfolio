@@ -8,9 +8,10 @@ body {
   color: #333;
 }
 
+/* ===== Header ===== */
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: #f7e7d7; /* fondo crema */
+  color: #333;               /* texto oscuro */
   padding: 30px 20px;
   text-align: center;
 }
@@ -29,6 +30,7 @@ header p {
 #sobre-mi {
   padding: 40px 20px;
   text-align: center;
+  border-top: 2px solid #ccc; /* separador */
 }
 
 .foto-perfil {
@@ -39,9 +41,10 @@ header p {
   margin-bottom: 20px;
 }
 
-/* ===== Sección Docencia y Proyectos ===== */
+/* ===== Secciones Docencia, Proyectos, CV, Contacto ===== */
 section {
   padding: 40px 20px;
+  border-top: 2px solid #ccc; /* separador entre secciones */
 }
 
 h2 {
@@ -51,24 +54,31 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  margin-top: 30px;
+  margin-top: 15px; /* espacio reducido sobre descripción */
+  margin-bottom: 5px;
 }
 
 /* ===== Galerías de imágenes ===== */
 .galeria {
-  display: flex;           /* Mostrar imágenes en fila */
-  flex-wrap: wrap;         /* Saltar a otra fila si no caben */
-  gap: 10px;               /* Espacio entre imágenes */
-  justify-content: center; /* Centrar las imágenes */
-  margin-bottom: 20px;     /* Separación inferior */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .galeria img {
-  max-width: 250px;        /* Ancho máximo de cada imagen */
-  height: auto;            /* Mantener proporción */
-  border-radius: 8px;      /* Bordes redondeados */
-  object-fit: cover;       /* Ajusta la imagen sin deformar */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra opcional */
+  height: 200px;           /* altura uniforme */
+  width: auto;             /* ajusta el ancho proporcional */
+  border-radius: 8px;
+  object-fit: cover;       /* recorta si es necesario sin deformar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease; /* transición suave para hover */
+}
+
+/* Efecto hover: se agranda al pasar el mouse */
+.galeria img:hover {
+  transform: scale(1.1); /* aumenta 10% */
 }
 
 /* ===== CV ===== */
