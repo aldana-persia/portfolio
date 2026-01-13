@@ -184,5 +184,60 @@ body.dark-mode .cv-button:hover {
   background-color: #ffd699;
   color: #222222;
 }
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #333333;
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #f0d9b5;
+}
+
+body.dark-mode .contacto-container a:hover {
+  color: #ffcc80;
+}
+
+/* Botón de cambio de tema */
+#modo-oscuro-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #a67c52; /* color de tu web */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+#modo-oscuro-btn:hover {
+  background-color: #8c6239;
+}
+/* Botón de modo oscuro fijo */
+#modo-oscuro-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 8px 12px;
+  background-color: #f0d9b5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#modo-oscuro-btn:hover {
+  background-color: #ffd699;
+}
 
 
