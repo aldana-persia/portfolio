@@ -17,6 +17,44 @@ h1 {
   font-size: 2.5em;
   line-height: 1.2; /* Menor interlineado del header */
 }
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #333333;
+  color: #f0f0f0;
+}
+
+body.dark-mode a {
+  color: #f0d9b5;
+}
+
+body.dark-mode .contacto-container a:hover {
+  color: #ffcc80;
+}
+
+/* Botón de cambio de tema */
+#modo-oscuro-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #a67c52; /* color de tu web */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+#modo-oscuro-btn:hover {
+  background-color: #8c6239;
+}
 
 header {
   background-color: #f3e0c1; /* Color de fondo cremosito */
@@ -108,3 +146,30 @@ section p {
   margin-right: 20px;
   margin-bottom: 0; /* Evita espacio vertical */
 }
+.contacto-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+
+.contacto-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contacto-container a:hover {
+  color: #a67c52; /* o cualquier color que combine con tu web */
+}
+
+.icono-contacto {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
