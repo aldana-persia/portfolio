@@ -173,3 +173,16 @@ section p {
   margin-right: 8px;
 }
 
+/* Botón de CV en modo oscuro */
+body.dark-mode .cv-button {
+  background-color: #f0d9b5; /* un color claro que contraste con fondo oscuro */
+  color: #333333; /* texto oscuro para contraste */
+  border: none;
+}
+
+body.dark-mode .cv-button:hover {
+  background-color: #ffd699;
+  color: #222222;
+}
+
+
