@@ -239,5 +239,28 @@ body.dark-mode .contacto-container a:hover {
 #modo-oscuro-btn:hover {
   background-color: #ffd699;
 }
+/* Botón de modo oscuro fijo y consistente */
+#modo-oscuro-btn {
+  position: fixed;       /* lo mantiene fijo */
+  top: 20px;             /* distancia desde arriba */
+  right: 20px;           /* distancia desde la derecha */
+  z-index: 1000;         /* siempre por encima */
+  padding: 8px 12px;
+  background-color: #f0d9b5; /* color claro consistente */
+  color: #333;           /* texto visible en modo claro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode #modo-oscuro-btn {
+  background-color: #333; /* color del botón en modo oscuro */
+  color: #f0d9b5;         /* texto visible en modo oscuro */
+}
+
+#modo-oscuro-btn:hover {
+  background-color: #ffd699;
+}
 
 
