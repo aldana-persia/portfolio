@@ -7,148 +7,409 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="modo-oscuro-btn">Modo Oscuro</button>
 
+  <!-- Botón modo oscuro -->
+  <button id="modo-oscuro-btn">Modo Oscuro</button>
 
+  <!-- Selector de idioma -->
+  <div class="selector-idioma">
+    <button data-idioma="es">ES</button>
+    <button data-idioma="en">EN</button>
+  </div>
 
+  <!-- Header -->
   <header>
-    <h1>Aldana Persia</h1>
-    <p>Diseñadora de indumentaria y docente</p>
+    <h1>
+      <span class="lang-es">Aldana Persia</span>
+      <span class="lang-en">Aldana Persia</span>
+    </h1>
+    <p>
+      <span class="lang-es">Diseñadora de indumentaria y Docente</span>
+      <span class="lang-en">Fashion Designer and Teacher</span>
+    </p>
   </header>
+
+  <!-- Menú de navegación -->
+  <nav class="menu-navegacion">
+    <button onclick="document.getElementById('sobre-mi').scrollIntoView({ behavior: 'smooth' })">
+      <span class="lang-es">Sobre mí</span>
+      <span class="lang-en">About Me</span>
+    </button>
+    <button onclick="document.getElementById('docencia').scrollIntoView({ behavior: 'smooth' })">
+      <span class="lang-es">Docencia y Talleres</span>
+      <span class="lang-en">Teaching & Workshops</span>
+    </button>
+    <button onclick="document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' })">
+      <span class="lang-es">Proyectos</span>
+      <span class="lang-en">Projects</span>
+    </button>
+    <button onclick="document.getElementById('cv').scrollIntoView({ behavior: 'smooth' })">
+      <span class="lang-es">Curriculum Vitae</span>
+      <span class="lang-en">Resume</span>
+    </button>
+    <button onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })">
+      <span class="lang-es">Contacto</span>
+      <span class="lang-en">Contact</span>
+    </button>
+  </nav>
 
   <!-- Sobre mí -->
   <section id="sobre-mi">
     <img src="images/foto_perfil.jpg" alt="Foto de Aldana Persia" class="foto-perfil">
-    <h2>Sobre mí</h2>
-
-    <p>Soy diseñadora de indumentaria graduada en la Universidad de Buenos Aires (UBA, Argentina), con trayectoria en diseño, patronaje y procesos textiles.</p>
-    <p>Coordino la Diplomatura en Diseño de Indumentaria de la Universidad Nacional de San Luis (UNSL, Argentina) y soy docente de la Escuela Argentina de Moda (EAModa, Argentina). Cuento con el trayecto de formación pedagógica de la UNSL, certificación oficial en Audaces y capacitación en Fab Textiles, Fab Lab Barcelona.</p>
-    <p>Integro educación, diseño e innovación para desarrollar propuestas claras, creativas y técnicamente sólidas.</p>
+    <h2>
+      <span class="lang-es">Sobre mí</span>
+      <span class="lang-en">About Me</span>
+    </h2>
+    <p>
+      <span class="lang-es">Soy diseñadora de indumentaria graduada en la Universidad de Buenos Aires (UBA, Argentina), con trayectoria en diseño, patronaje y procesos textiles.</span>
+      <span class="lang-en">I am a fashion designer graduated from the University of Buenos Aires (UBA, Argentina), with experience in design, pattern making, and textile processes.</span>
+    </p>
+    <p>
+      <span class="lang-es">Actualmente coordino la Diplomatura en Diseño de Indumentaria de la Universidad Nacional de San Luis, Argentina (UNSL) y formo parte del equipo docente de la Escuela Argentina de Moda.
+Mi formación incluye capacitación en Fab Textiles Barcelona, trayecto pedagógico en la UNSL y certificación oficial en patronaje digital y diseño 4D con Audaces.
+</span>
+      <span class="lang-en">My professional path combines practice and teaching: I currently coordinate the Diploma in Fashion Design at the National University of San Luis, Argentina (UNSL) and I am part of the teaching staff at the Argentine School of Fashion.
+I have received training at Fab Textiles Barcelona, hold pedagogical training from UNSL, and am officially certified in digital pattern making and 4D design with Audaces, integrating technological tools into the design process.
+</span>
+    </p>
+    <p>
+      <span class="lang-es">Mi práctica integra educación, diseño e innovación, con el objetivo de desarrollar propuestas claras, creativas y técnicamente sólidas.</span>
+      <span class="lang-en">My work operates at the intersection of education, design, and innovation, aiming to develop proposals that balance conceptual clarity, creativity, and technical rigor.</span>
+    </p>
   </section>
 
   <!-- Docencia -->
   <section id="docencia">
-    <h2>Docencia y Talleres</h2>
+    <h2>
+      <span class="lang-es">Docencia y Talleres</span>
+      <span class="lang-en">Teaching & Workshops</span>
+    </h2>
 
-    <h3>Universidad Nacional de San Luis (Argentina)</h3>
-    <p>Coordino la Diplomatura de extensión en Diseño de Indumentaria, participando en el diseño del programa, planificación de contenidos y dictado de clases.</p>
-    <div class="galeria">
-      <img src="images/docencia3.jpg" alt="Diplomatura UNSL 1">
-      <img src="images/docencia4.jpg" alt="Diplomatura UNSL 2">
-      <img src="images/docencia1.jpg" alt="Diplomatura UNSL 3">
-      <img src="images/docencia2.jpg" alt="Diplomatura UNSL 4">
+    <h3>
+      <span class="lang-es">Universidad Nacional de San Luis (Argentina)</span>
+      <span class="lang-en">National University of San Luis (Argentina)</span>
+    </h3>
+    <p>
+      <span class="lang-es">Coordino la Diplomatura en Diseño de Indumentaria, participando en el diseño del programa, la planificación de contenidos y el dictado de clases, con foco en la integración entre concepto, técnica y práctica proyectual.</span>
+      <span class="lang-en">I coordinate the Extension Diploma in Fashion Design, participating in the design of the program, content planning, and teaching activities, with a focus on integrating conceptual development, technical skills, and design practice.</span>
+    </p>
+
+    <!-- Slider de Docencia -->
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/docencia3.jpg" alt="">
+          <img src="images/docencia4.jpg" alt="">
+          <img src="images/docencia8.jpg" alt="">
+          <img src="images/docencia9.jpg" alt="">
+          <img src="images/docencia1.jpg" alt="">
+          <img src="images/docencia2.jpg" alt="">
+          <img src="images/docencia6.jpg" alt="">
+          <img src="images/docencia5.jpg" alt="">
+          <img src="images/docencia7.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
 
-    <h3>Talleres de Patronaje</h3>
-    <p>Desarrollo talleres teórico-prácticos orientados a comprender el proceso completo de diseño y construcción de prendas.</p>
-    <div class="galeria">
-      <img src="images/patronaje1.jpg" alt="Taller de patronaje 1">
-      <img src="images/patronaje2.jpg" alt="Taller de patronaje 2">
-      <img src="images/patronaje3.jpg" alt="Taller de patronaje 3">
+    <!-- Talleres de Patronaje -->
+    <h3>
+      <span class="lang-es">Talleres de Patronaje</span>
+      <span class="lang-en">Pattern Making Workshops</span>
+    </h3>
+    <p>
+      <span class="lang-es">Desarrollo talleres teórico-prácticos orientados al patronaje, abordando el proceso desde el desarrollo de patrones hasta la materialización de prendas.</span>
+      <span class="lang-en">I develop theoretical–practical workshops focused on pattern making and garment construction, addressing the process from pattern development to design materialization.</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/patronaje1.jpg" alt="">
+          <img src="images/patronaje2.jpg" alt="">
+          <img src="images/patronaje3.jpg" alt="">
+          <img src="images/patronaje4.jpg" alt="">
+          <img src="images/patronaje5.jpg" alt="">
+          <img src="images/patronaje6.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
 
-    <h3>Escuela Argentina de Moda (EAModa)</h3>
-    <p>Docente de la Materia Práctica proyectual en 1er año de la Tecnicatura en Diseño de Moda e indumentaria. Trabajo contenidos vinculados a la representación digital de indumentaria, articulando herramientas técnicas y desarrollo creativo.</p>
-    <div class="galeria">
-      <img src="images/eamoda1.jpg" alt="EAModa 1">
+    <!-- Talleres de Serigrafía -->
+    <h3>
+      <span class="lang-es">Talleres de Serigrafía Textil</span>
+      <span class="lang-en">Textile Screen Printing Workshops</span>
+    </h3>
+    <p>
+      <span class="lang-es">Soy especialista en serigrafía textil y dicto seminarios teórico-prácticos enfocados en la experimentación, el aprendizaje técnico y la producción colectiva.</span>
+      <span class="lang-en">I am a specialist in textile screen printing and conduct theoretical–practical seminars focused on experimentation, technical learning, and collective production.</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/serigrafia1.jpg" alt="">
+          <img src="images/serigrafia2.jpg" alt="">
+          <img src="images/serigrafia3.jpg" alt="">
+          <img src="images/serigrafia4.jpg" alt="">
+          <img src="images/serigrafia8.jpg" alt="">
+          <img src="images/serigrafia6.jpg" alt="">
+          <img src="images/serigrafia7.jpg" alt="">
+          <img src="images/serigrafia9.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
-
-    <h3>Talleres de Serigrafía Textil</h3>
-    <p>He desarrollado seminarios teórico-prácticos de serigrafía textil orientados a la experimentación, el aprendizaje técnico y la producción colectiva.</p>
-    <div class="galeria">
-      <img src="images/serigrafia1.jpg" alt="Taller de serigrafía 1">
-      <img src="images/serigrafia2.jpg" alt="Taller de serigrafía 2">
-      <img src="images/serigrafia3.jpg" alt="Taller de serigrafía 3">
-      <img src="images/serigrafia4.jpg" alt="Taller de serigrafía 4">
-    </div>
+<p>
+  <span class="lang-es">Los trabajos que se muestran fueron realizados por estudiantes durante los talleres y cursos que coordino.</span>
+  <span class="lang-en">The works shown were produced by students during the workshops and courses I coordinate.</span>
+</p>
   </section>
 
   <!-- Proyectos -->
   <section id="proyectos">
-    <h2>Proyectos</h2>
+    <h2>
+      <span class="lang-es">Proyectos</span>
+      <span class="lang-en">Projects</span>
+    </h2>
 
-    <h3>Hilanda - Diseño Sustentable</h3>
-    <p>Proyecto de investigación y diseño centrado en la reutilización de caucho reciclado y la exploración de procesos textiles artesanales. Marca certificada por el Ministerio de Medio Ambiente de San Luis, Argentina. Resolución n° 61- PGA-2012.</p>
-    <div class="galeria">
-      <img src="images/hilanda1.jpg" alt="Hilanda 1">
-      <img src="images/hilanda2.jpg" alt="Hilanda 2">
-      <img src="images/hilanda3.jpg" alt="Hilanda 3">
-      <img src="images/hilanda4.jpg" alt="Hilanda 4">
+    <!-- Hilanda -->
+    <h3>
+      <span class="lang-es">Hilanda - Diseño Sustentable</span>
+      <span class="lang-en">Hilanda - Sustainable Design</span>
+    </h3>
+    <p>
+      <span class="lang-es">Desarrollé la marca Hilanda, un proyecto de diseño e investigación centrado en la reutilización de caucho reciclado y la exploración de procesos textiles artesanales. La marca está certificada por el Ministerio de Medio Ambiente de San Luis (Argentina).</span>
+      <span class="lang-en">I developed the brand Hilanda, a design and research project focused on the reuse of recycled rubber and the exploration of artisanal textile processes. The brand has been certified by the Ministry of Environment of San Luis (Argentina).</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/hilanda1.jpg" alt="">
+          <img src="images/hilanda3.jpg" alt="">
+          <img src="images/hilanda11.jpg" alt="">
+          <img src="images/hilanda4.jpg" alt="">
+          <img src="images/hilanda5.jpg" alt="">
+          <img src="images/hilanda6.jpg" alt="">
+          <img src="images/hilanda7.jpg" alt="">
+          <img src="images/hilanda2.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
 
-    <h3>Fab Textiles - Fab Lab Barcelona</h3>
-    <p>Proyecto de investigación enfocado en la exploración de nuevas materialidades y tecnologías aplicadas al diseño de indumentaria y textil. El trabajo integra experimentación, prototipado y desarrollo de superficies innovadoras.</p>
-    <div class="galeria">
-      <img src="images/fabtextiles1.jpg" alt="Fab Textiles 1">
-      <img src="images/fabtextiles2.jpg" alt="Fab Textiles 2">
-      <img src="images/fabtextiles3.jpg" alt="Fab Textiles 3">
-      <img src="images/fabtextiles4.jpg" alt="Fab Textiles 4">
+    <!-- Fab Textiles -->
+    <h3>
+      <span class="lang-es">Fab Textiles - Fab Lab Barcelona</span>
+      <span class="lang-en">Fab Textiles - Fab Lab Barcelona</span>
+    </h3>
+    <p>
+      <span class="lang-es">Integré el equipo de Fab Textiles, donde experimenté con nuevas materialidades y tecnologías aplicadas al diseño de indumentaria y textil. El trabajo involucró experimentación, prototipado y desarrollo de superficies innovadoras.</span>
+      <span class="lang-en">I joined the Fab Textiles team, where I experimented with new materialities and technologies applied to fashion and textile design. The work involved experimentation, prototyping, and the development of innovative surfaces.</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/fabtextiles9.jpg" alt="">
+          <img src="images/fabtextiles2.jpg" alt="">
+          <img src="images/fabtextiles1.jpg" alt="">
+          <img src="images/fabtextiles6.jpg" alt="">
+          <img src="images/fabtextiles3.jpg" alt="">
+          <img src="images/fabtextiles5.jpg" alt="">
+          <img src="images/fabtextiles4.jpg" alt="">
+          <img src="images/fabtextiles7.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
 
-    <h3>Barcelona Design Week 12° Edición</h3>
-    <p>Colaboración en el proyecto expositivo Refraccions de la diseñadora Cristina Noguer, presentado en el marco de la Barcelona Design Week, Design Unique Piece.</p>
-    <div class="galeria">
-      <img src="images/barcelona1.jpg" alt="Barcelona Design Week 1">
-      <img src="images/barcelona2.jpg" alt="Barcelona Design Week 2">
-      <img src="images/barcelona3.jpg" alt="Barcelona Design Week 3">
-      <img src="images/barcelona4.jpg" alt="Barcelona Design Week 4">
+    <!-- Barcelona Design Week -->
+    <h3>
+      <span class="lang-es">Barcelona Design Week 12° Edición</span>
+      <span class="lang-en">Barcelona Design Week 12th Edition</span>
+    </h3>
+    <p>
+      <span class="lang-es">Colaboré en el proyecto expositivo Refraccions de la diseñadora Cristina Noguer, presentado en la Barcelona Design Week, Design Unique Piece.</span>
+      <span class="lang-en">I collaborated on the exhibition project Refraccions by designer Cristina Noguer, presented as part of Barcelona Design Week, Design Unique Piece.</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/barcelona3b.jpg" alt="">
+          <img src="images/barcelona5.jpg" alt="">
+          <img src="images/barcelona4.jpg" alt="">
+          <img src="images/barcelona1.jpg" alt="">
+          <img src="images/barcelona2.jpg" alt="">
+          <img src="images/barcelona6.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
+    </div>
+
+<!-- Audaces -->
+    <h4>
+      <span class="lang-es">Audaces</span>
+      <span class="lang-en">Audaces</span>
+    </h3>
+    <p>
+      <span class="lang-es">Cuento con certificación oficial en patronaje digital y diseño 4D con Audaces.</span>
+      <span class="lang-en">I hold an official certification in digital patternmaking and 4D design with Audaces.</span>
+    </p>
+    <div class="slider">
+      <button class="flecha izquierda">❮</button>
+      <div class="slider-ventana">
+        <div class="galeria slider-track">
+          <img src="images/audaces1.jpg" alt="">
+          <img src="images/audaces8.png" alt="">
+          <img src="images/audaces7.png" alt="">
+          <img src="images/audaces1.gif" alt="">
+          <img src="images/audaces2.jpg" alt="">
+          <img src="images/audaces4.jpg" alt="">
+          <img src="images/audaces3.jpg" alt="">
+        </div>
+      </div>
+      <button class="flecha derecha">❯</button>
     </div>
   </section>
 
-  <!-- Curriculum Vitae -->
+  <!-- Curriculum -->
   <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>Puedes descargar y ver mi CV haciendo clic en el botón:</p>
-    <p><a href="images/cv.pdf" target="_blank" class="cv-button">Descargar Curriculum Vitae</a></p>
+    <h2>
+      <span class="lang-es">Curriculum Vitae</span>
+      <span class="lang-en">Resume</span>
+    </h2>
+    <p>
+      <span class="lang-es">Puedes descargar y ver mi CV haciendo clic en el botón:</span>
+      <span class="lang-en">You can download and view my resume by clicking the button:</span>
+    </p>
+    <a id="cv-link" href="images/cv.pdf" target="_blank" class="cv-button">
+    <span class="lang-es">Curriculum Vitae</span>
+    <span class="lang-en">Resume</span>
+  </a>
   </section>
 
- <!-- Contacto -->
-<section id="contacto">
-  <h2>Contacto</h2>
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>
+      <span class="lang-es">Contacto</span>
+      <span class="lang-en">Contact</span>
+    </h2>
+    <div class="contacto-container">
+      <span class="contacto-fijo">
+        <img src="images/email-icon.png" alt="Email" class="icono-contacto">
+        persiaaldana@gmail.com
+      </span>
+      <a href="https://www.instagram.com/aldana.persia/" target="_blank">
+        <img src="images/instagram-icon.png" alt="Instagram" class="icono-contacto">
+        @aldana.persia
+      </a>
+      <a href="https://www.linkedin.com/in/aldana-persia/" target="_blank">
+        <img src="images/linkedin-icon.png" alt="LinkedIn" class="icono-contacto">
+        Aldana Persia
+      </a>
+    </div>
+  </section>
 
-  <div class="contacto-container">
+  <!-- Scripts -->
+  <script>
+    /* Modo oscuro */
+    const btn = document.getElementById('modo-oscuro-btn');
+    const body = document.body;
 
-    <!-- Email -->
-    <a href="mailto:persiaaldana@gmail.com">
-      <img src="images/email-icon.png" alt="Email" class="icono-contacto">
-      persiaaldana@gmail.com
-    </a>
+    function actualizarTextoBoton() {
+      btn.textContent = body.classList.contains('dark-mode') ? "Modo claro" : "Modo Oscuro";
+    }
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/aldana.persia/" target="_blank">
-      <img src="images/instagram-icon.png" alt="Instagram" class="icono-contacto">
-      @aldana.persia
-    </a>
+    if (localStorage.getItem('tema') === 'dark') body.classList.add('dark-mode');
+    actualizarTextoBoton();
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/aldana-persia/" target="_blank">
-      <img src="images/linkedin-icon.png" alt="LinkedIn" class="icono-contacto">
-      Aldana Persia
-    </a>
+    btn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      localStorage.setItem('tema', body.classList.contains('dark-mode') ? 'dark' : 'light');
+      actualizarTextoBoton();
+    });
 
-  </div>
-</section>
+    /* Selector de idioma y cambio de CV */
+    const cvLink = document.getElementById('cv-link');
+    function mostrarIdioma(idioma) {
+      document.querySelectorAll('.lang-es').forEach(el => el.style.display = idioma === 'es' ? 'inline' : 'none');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = idioma === 'en' ? 'inline' : 'none');
+      cvLink.href = idioma === 'en' ? 'images/cv-en.pdf' : 'images/cv.pdf';
+    }
 
-<script>
-  const btn = document.getElementById('modo-oscuro-btn');
-  const body = document.body;
+    // Mostrar español por defecto al cargar
+    mostrarIdioma('es');
 
-  // Ver si el usuario ya tenía preferencia
-  if(localStorage.getItem('tema') === 'dark') {
-    body.classList.add('dark-mode');
+    document.querySelectorAll('.selector-idioma button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const idioma = btn.getAttribute('data-idioma');
+        mostrarIdioma(idioma);
+      });
+    });
+
+    /* Sliders y Lightbox */
+    document.querySelectorAll(".slider").forEach(slider => {
+  const track = slider.querySelector(".slider-track");
+  const imgs = track.querySelectorAll("img");
+  const prev = slider.querySelector(".izquierda");
+  const next = slider.querySelector(".derecha");
+  let index = 0;
+
+  function mover() {
+    const imgWidth = imgs[0].getBoundingClientRect().width + 12; // ancho + gap
+    const trackWidth = track.scrollWidth;           // ancho total de todas las imágenes
+    const ventanaWidth = slider.querySelector(".slider-ventana").offsetWidth;
+    const maxTranslate = trackWidth - ventanaWidth; // cuánto se puede mover como máximo
+
+    let translateX = index * imgWidth;
+    if (translateX > maxTranslate) translateX = maxTranslate;
+    if (translateX < 0) translateX = 0;
+
+    track.style.transform = `translateX(-${translateX}px)`;
   }
 
-  btn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    // Guardar la preferencia
-    if(body.classList.contains('dark-mode')) {
-      localStorage.setItem('tema', 'dark');
-    } else {
-      localStorage.setItem('tema', 'light');
-    }
+  next.addEventListener("click", () => {
+    index++;
+    mover();
   });
-</script>
 
+  prev.addEventListener("click", () => {
+    index--;
+    mover();
+  });
+
+  // Swipe táctil
+  let startX = 0;
+  track.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+  track.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) index++;
+    if (endX - startX > 50) index--;
+    mover();
+  });
+
+  // Click para agrandar
+  imgs.forEach(img => img.addEventListener("click", () => abrirLightbox(img.src)));
+
+  // Inicial
+  mover();
+});
+
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+    lightbox.innerHTML = "<img>";
+    document.body.appendChild(lightbox);
+    function abrirLightbox(src) {
+      lightbox.querySelector("img").src = src;
+      lightbox.classList.add("activo");
+    }
+    lightbox.addEventListener("click", () => lightbox.classList.remove("activo"));
+  </script>
 
 </body>
 </html>
