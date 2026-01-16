@@ -67,16 +67,16 @@ section p {
 /* --- Galerías --- */
 .galeria {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: flex-start;
-  justify-content: flex-start
+  justify-content: flex-start;
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .galeria img {
   height: auto;
-  max-height: 300px
+  max-height: 300px;
   width: auto;
   display: block;
   transition: transform 0.3s;
@@ -353,28 +353,49 @@ body.dark-mode .flecha:hover {
 
 /* --- Responsive (celular) --- */
 @media (max-width: 600px) {
-  #modo-oscuro-btn {
-    top: 10px;
-    right: 10px;
-    font-size: 0.8em;
-    padding: 6px 10px;
+
+  h1 {
+    font-size: 1.8em;
   }
 
-  header {
-    padding-top: 70px;
+  section {
+    padding: 30px 15px;
   }
 
-  .flecha {
-    width: 20px;
-    height: 20px;
-    font-size: 18px;
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+  }
+
+  .menu-navegacion {
+    position: static;
+  }
+
+  .slider {
+    max-width: 100%;
   }
 
   .slider-track img {
-    min-width: 70%;
+    width: 85vw;
     height: auto;
+    max-height: 300px;
+  }
+
+  .flecha {
+    display: none; /* swipe solamente */
+  }
+
+  .selector-idioma {
+    top: 10px;
+    left: 10px;
+  }
+
+  #modo-oscuro-btn {
+    top: 10px;
+    right: 10px;
   }
 }
+
 /* Mail fijo en modo oscuro */
 body.dark-mode .contacto-fijo {
   color: #e0e0e0; /* gris claro, legible sobre fondo oscuro */
