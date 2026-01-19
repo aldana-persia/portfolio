@@ -283,7 +283,7 @@ body.dark-mode .menu-navegacion button:hover {
 
 .slider-track img {
   flex-shrink: 0;
-  height: 200px;
+  height: 300px;
   width: auto; /* ancho proporcional */
   object-fit: cover;
   cursor: pointer;
@@ -371,7 +371,7 @@ body.dark-mode .flecha:hover {
   }
 
   .slider-track img {
-    height: 150px;
+    height: 200px;
     width: auto;
     object-fit: contain;
     flex-shrink: 0;
